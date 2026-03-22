@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import api_root, router
 
+
+# Use environment variable for Codespace base URL in API root response
 codespace_name = os.environ.get('CODESPACE_NAME')
 if codespace_name:
     base_url = f"https://{codespace_name}-8000.app.github.dev"
